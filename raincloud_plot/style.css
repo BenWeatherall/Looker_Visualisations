@@ -1,0 +1,45 @@
+body {
+    text-align:center;
+    --saturation: 40%;
+    --lightness: 80%;
+}
+g.raincloud:nth-child(1) {
+    --color: hsl(0, var(--saturation), var(--lightness));
+}
+g.raincloud:nth-child(2) {
+    --color: hsl(90, var(--saturation), var(--lightness));
+}
+g.raincloud:nth-child(3) {
+    --color: hsl(180, var(--saturation), var(--lightness));
+}
+g.raincloud:nth-child(4) {
+    --color: hsl(270, var(--saturation), var(--lightness));
+}
+
+svg {
+    --accent: black;
+    shape-rendering: auto;
+}
+
+path {
+    fill: var(--color);
+    stroke: var(--accent);
+}
+
+line {
+    stroke: var(--accent);
+}
+
+rect {
+    fill-opacity: 0.4;
+    stroke: var(--accent);
+    fill: var(--color);
+}
+
+.dots circle {
+    fill: var(--color);
+}
+
+.dots circle:hover {
+    fill: var(--accent);
+}
